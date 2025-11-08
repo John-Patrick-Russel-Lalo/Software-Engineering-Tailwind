@@ -54,7 +54,6 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
     --blur-xl: 24px;
@@ -2293,12 +2292,6 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
   inherits: false;
   initial-value: 100%;
 }
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -2309,12 +2302,6 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -2323,12 +2310,6 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
   }
 }
 @keyframes bounce {
