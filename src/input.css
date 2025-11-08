@@ -104,7 +104,7 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
 }
 
 .btn-primary {
-  @apply bg-white bg-primary px-6 py-2 rounded-md font-medium cursor-pointer transition-colors duration-300 hover:bg-gray-200;
+  @apply bg-white bg-primary px-6 py-2 rounded-md font-medium cursor-pointer transition-colors duration-300 hover:bg-gray-200 text-[var(--color-background)];
 }
 
 /* Hero Section */
