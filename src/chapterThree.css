@@ -11,7 +11,6 @@
 .chapter3-main{
     @apply      text-justify 
                  p-25  bg-primary/0 
-                 
                  text-pretty sm:text-pretty lg:text-pretty xl:text-wrap 
                  sm:tracking-tight md:tracking-normal lg:tracking-normal xl:tracking-wider;
 }
