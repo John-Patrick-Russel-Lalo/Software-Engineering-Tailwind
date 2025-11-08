@@ -54,6 +54,8 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
     --blur-xl: 24px;
     --default-transition-duration: 150ms;
@@ -425,11 +427,7 @@ td {
   margin: calc(var(--spacing) * 10);
   border-radius: var(--radius-lg);
   background-color: var(--color-background);
-<<<<<<< HEAD
-  padding: calc(var(--spacing) * 30);
-=======
   padding: calc(var(--spacing) * 10);
->>>>>>> 1f44c7131b2b164d86541bc1a949c440f0b48e54
 }
 .chapter2-section {
   margin: calc(var(--spacing) * 10);
@@ -627,9 +625,9 @@ td {
   padding: calc(var(--spacing) * 20);
 }
 .chapter3-main {
-  background-color: color-mix(in srgb, #0284c74d 35%, transparent);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
-    background-color: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
   }
   padding: calc(var(--spacing) * 25);
   text-align: justify;
@@ -662,8 +660,12 @@ td {
 }
 .chapter3-header {
   margin-bottom: calc(var(--spacing) * 20);
+  animation: var(--animate-bounce);
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   text-align: center;
   font-size: var(--text-3xl);
@@ -692,7 +694,10 @@ td {
 .chapter3-objective {
   margin-top: calc(var(--spacing) * 5);
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   text-align: justify;
   font-size: var(--text-lg);
@@ -734,7 +739,10 @@ td {
 .chapter3-content {
   margin-top: calc(var(--spacing) * 5);
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -798,7 +806,10 @@ td {
 }
 .chapter3-section {
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -836,8 +847,18 @@ td {
 }
 .chapter3-images {
   margin-inline: auto;
-  margin-block: calc(var(--spacing) * 5);
+  margin-block: calc(var(--spacing) * 10);
   display: block;
+  width: calc(var(--spacing) * 6);
+  height: calc(var(--spacing) * 6);
+  &:hover {
+    @media (hover: hover) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
   @media (width >= 40rem) {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -854,7 +875,10 @@ td {
 .chapter3-keypoints {
   margin-block: calc(var(--spacing) * 10);
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   text-align: left;
   font-size: var(--text-lg);
@@ -927,7 +951,10 @@ td {
 .chapter3-section31 {
   margin-block: calc(var(--spacing) * 10);
   border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+  }
   padding: calc(var(--spacing) * 6);
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -1024,9 +1051,9 @@ td {
 .chapter3-last_section {
   margin-block: calc(var(--spacing) * 10);
   border-radius: var(--radius-lg);
-  background-color: color-mix(in srgb, #0284c74d 35%, transparent);
+  background-color: color-mix(in srgb, #0284c74d 0%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
-    background-color: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
   }
   padding: calc(var(--spacing) * 6);
   text-align: justify;
@@ -2092,14 +2119,6 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
   inherits: false;
   initial-value: 0;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -2168,6 +2187,14 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
   inherits: false;
 }
 @property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
@@ -2266,6 +2293,54 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
   inherits: false;
   initial-value: 100%;
 }
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -2289,8 +2364,6 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-space-y-reverse: 0;
-      --tw-duration: initial;
-      --tw-ease: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
@@ -2308,6 +2381,8 @@ h1, p, h2, h3, h4, h5, h6, span, div, ul, li, button, article {
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
