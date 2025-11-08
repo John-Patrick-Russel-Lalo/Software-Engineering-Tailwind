@@ -23,7 +23,7 @@
            xl:text-wrap   mb-20   
            text-3xl font-bold p-6  rounded-lg 
            bg-primary/100 shadow-lg shadow-blue-500/40 
-           md:col-span-2     lg:col-span-3  xl:col-span-4;
+           md:col-span-2     lg:col-span-3  xl:col-span-4 animate-bounce;
 }
 
 .chapter3-objective{

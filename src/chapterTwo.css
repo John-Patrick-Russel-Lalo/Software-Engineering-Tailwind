@@ -1,18 +1,10 @@
-.chapter2-body{
-  @apply bg-black min-h-screen flex flex-col items-center justify-center text-white space-y-8
-  } 
-          
-
-.chapter2-btn{
-  @apply bg-primary rounded-lg text-center p-4 m-30 text-3xl bg-blue-500 shadow-lg shadow-blue-500/50 font-bold
-}
 
 .chapter2-main{
   @apply mt-10 flex flex-col items-center text-center sm:text-left sm:items-start
 }
 
 .chapter2-header{
-  @apply bg-[var(--color-background)] rounded-lg p-10 m-10
+  @apply bg-[var(--color-background)] rounded-lg max-w-full self-center animate-pulse
 }
 
 .chapter2-section{
